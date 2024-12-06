@@ -106,6 +106,7 @@ npx hardhat run scripts/simulateTransactions.js --network localhost
 ### You can check the properties and transactions in the terminal where the Hardhat node is running. ###
 
 # 5. Testing part
+
 ```bash
 npx hardhat test
 ```

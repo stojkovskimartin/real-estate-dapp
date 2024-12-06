@@ -41,13 +41,13 @@ async function attemptPurchaseFailure(contract, buyer, propertyId) {
 
 async function main() {
     const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
-    const buyer1PrivateKey = "BUYER_PRIVATE_KEY_1"; //REPLACE with the #Account 1
-    const buyer2PrivateKey = "BUYER_PRIVATE_KEY_2"; //REPLACE with the #Account 2
+    const buyer1PrivateKey = "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"; //REPLACE with the #Account 1
+    const buyer2PrivateKey = "0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a"; //REPLACE with the #Account 2
 
     const buyer1 = new ethers.Wallet(buyer1PrivateKey, provider);
     const buyer2 = new ethers.Wallet(buyer2PrivateKey, provider);
 
-    const contractAddress = "CONTRACT_ADDRESS"; //REPLACE with actual deployed address
+    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; //REPLACE with actual deployed address
     console.log("Contract address:", contractAddress);
 
     // Check if the contract exists

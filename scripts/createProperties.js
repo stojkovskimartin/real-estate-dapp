@@ -3,10 +3,10 @@ const { realisticWait, displayListedProperties } = require("./setup");
 
 async function main() {
     const provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
-    const ownerPrivateKey = "OWNER_PRIVATE_KEY"; //REPLACE with #Account 0
+    const ownerPrivateKey = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; //REPLACE with #Account 0
     const owner = new ethers.Wallet(ownerPrivateKey, provider);
 
-    const contractAddress = "CONTRACT_ADDRESS"; //REPLACE with actual deployed address
+    const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; //REPLACE with actual deployed address
     console.log(`\n📄 Interacting with RealEstateNFT contract at: ${contractAddress}`);
     await realisticWait(2, 4);
 

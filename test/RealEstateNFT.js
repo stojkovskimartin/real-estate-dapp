@@ -171,7 +171,15 @@ describe("RealEstateNFT", function () {
         });
     });
 
-    describe("Funds Withdrawal", function () {
+    describe("Platform Fee", function () {
+        it("Should allow admin to set platform fee", async function () {
+            await expect(realEstateNFT.connect(admin).setPlatformFee(20))
+                .to.emit(realEstateNFT, "PlatformFeeUpdated")
+                .withArgs(20);
+
+            expect(await realEstateNFT.platformFee()).to.equal(20);
+        });
+
         it("Should not allow non-admin to withdraw funds", async function () {
             await expect(realEstateNFT.connect(buyer).withdrawFunds())
                 .to.be.revertedWith("AccessControl: account " + buyer.address.toLowerCase() + " is missing role " + ADMIN_ROLE);
